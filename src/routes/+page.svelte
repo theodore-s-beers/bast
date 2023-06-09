@@ -12,6 +12,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>قبض و بسط</title>
+</svelte:head>
+
 <div
 	class="flex h-screen justify-center bg-cover bg-center lg:items-center"
 	class:bg-bast={status === 'basṭ'}
