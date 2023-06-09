@@ -13,6 +13,8 @@
 </script>
 
 <svelte:head>
+	<meta name="description" content="A signal of my state of mind" />
+	<meta name="twitter:title" content="قبض و بسط" />
 	<title>قبض و بسط</title>
 </svelte:head>
 
