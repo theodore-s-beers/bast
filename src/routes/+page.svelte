@@ -14,6 +14,9 @@
 
 <svelte:head>
 	<meta name="description" content="A signal of my state of mind" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="قبض و بسط" />
+	<meta property="og:url" content="https://www.theobeers.com/bast/" />
 	<meta property="og:image" content="https://www.theobeers.com/bast/og.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="قبض و بسط" />
