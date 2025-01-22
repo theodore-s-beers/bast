@@ -9,8 +9,18 @@
 	);
 
 	onMount(async () => {
-		const res = await fetch("https://qabz.fly.dev/en");
-		status = await res.text();
+		try {
+			const res = await fetch("https://qabz.fly.dev/en");
+			if (!res.ok) {
+				throw new Error(`HTTP error; status code ${res.status}`);
+			}
+
+			status = await res.text();
+		} catch (err) {
+			if (err instanceof Error) {
+				console.error("API request failed:", err.message);
+			}
+		}
 	});
 </script>
 
