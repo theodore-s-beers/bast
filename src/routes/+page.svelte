@@ -15,8 +15,8 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" as="image" href="./bast.jpg" />
-	<link rel="preload" as="image" href="./qabz.jpg" />
+	<link rel="preload" as="image" href="./bast.webp" />
+	<link rel="preload" as="image" href="./qabz.webp" />
 
 	<meta name="description" content="A signal of my state of mind" />
 

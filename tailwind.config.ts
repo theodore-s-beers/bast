@@ -5,8 +5,8 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				bast: "url(/bast.jpg)",
-				qabz: "url(/qabz.jpg)",
+				bast: "url(/bast.webp)",
+				qabz: "url(/qabz.webp)",
 			},
 			fontFamily: {
 				arabic: '"Scheherazade New", serif',
