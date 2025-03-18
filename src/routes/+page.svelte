@@ -4,22 +4,16 @@
 	let status: string | null = $state(null);
 	let statusFa = $derived(status === "basṭ" ? "بسط" : status === "qabż" ? "قبض" : null);
 
-	let offset = $derived(
-		status === "basṭ" ? "lg:mr-[25vw]" : status === "qabż" ? "lg:mr-[50vw]" : null,
-	);
-
 	onMount(async () => {
 		try {
 			const res = await fetch("https://qabz.fly.dev/en");
-			if (!res.ok) {
-				throw new Error(`HTTP error; status code ${res.status}`);
-			}
+			if (!res.ok) throw new Error(`HTTP error; status code ${res.status}`);
 
 			status = await res.text();
 		} catch (err) {
 			if (err instanceof Error) {
 				console.error("API request failed:", err.message);
-			}
+			} else console.error(err);
 		}
 	});
 </script>
@@ -42,15 +36,19 @@
 </svelte:head>
 
 <div
-	class="flex h-screen justify-center bg-cover bg-center lg:items-center"
-	class:bg-bast={status === "basṭ"}
-	class:bg-qabz={status === "qabż"}
-	class:bg-gray-100={status === null}
+	class={[
+		"flex h-screen justify-center bg-cover bg-center lg:items-center",
+		status === "basṭ" && "bg-[url(/bast.webp)]",
+		status === "qabż" && "bg-[url(/qabz.webp)]",
+		status === null && "bg-gray-100",
+	]}
 >
 	<div
-		class="mt-8 h-fit rounded-lg bg-gray-100 px-10 py-6 font-arabic text-5xl font-medium {offset}"
-		class:pt-4={status === "qabż"}
-		class:pb-8={status === "qabż"}
+		class={[
+			"font-arabic mt-8 h-fit rounded-lg bg-gray-100 px-10 py-6 text-5xl font-medium",
+			status === "basṭ" && "lg:mr-[25vw]",
+			status === "qabż" && "pt-4 pb-8 lg:mr-[50vw]",
+		]}
 	>
 		{statusFa}
 	</div>
