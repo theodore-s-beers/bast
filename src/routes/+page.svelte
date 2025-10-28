@@ -45,7 +45,7 @@
 >
 	<div
 		class={[
-			"font-arabic mt-8 h-fit rounded-lg bg-gray-100 px-10 py-6 text-5xl font-medium",
+			"mt-8 h-fit rounded-lg bg-gray-100 px-10 py-6 font-arabic text-5xl font-medium",
 			status === "basṭ" && "lg:mr-[25vw]",
 			status === "qabż" && "pt-4 pb-8 lg:mr-[50vw]",
 		]}
