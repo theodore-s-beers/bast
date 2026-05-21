@@ -1,44 +1,31 @@
 {
-	"name": "bast",
-	"version": "0.1.0",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"build": "vite build",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"deploy": "pnpm run build && gh-pages -td build",
-		"dev": "vite dev",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"@eslint/compat": "^2.0.5",
-		"@eslint/js": "^10.0.1",
-		"@sveltejs/adapter-static": "^3.0.10",
-		"@sveltejs/kit": "^2.58.0",
-		"@sveltejs/vite-plugin-svelte": "^7.0.0",
-		"@tailwindcss/vite": "^4.2.4",
-		"eslint": "^10.2.1",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-svelte": "^3.17.1",
-		"gh-pages": "^6.3.0",
-		"globals": "^17.5.0",
-		"oxfmt": "^0.47.0",
-		"prettier": "^3.8.3",
-		"prettier-plugin-svelte": "^3.5.1",
-		"prettier-plugin-tailwindcss": "^0.8.0",
-		"svelte": "^5.55.5",
-		"svelte-check": "^4.4.6",
-		"tailwindcss": "^4.2.4",
-		"typescript": "^6.0.3",
-		"typescript-eslint": "^8.59.1",
-		"vite": "^8.0.10"
-	},
-	"pnpm": {
-		"overrides": {
-			"cookie": "^1.1.1"
-		}
-	}
+  "name": "bast",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "deploy": "pnpm run build && gh-pages -td build",
+    "dev": "vite dev",
+    "format": "oxfmt",
+    "lint": "oxfmt --check && oxlint",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.60.1",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/node": "^25.9.1",
+    "gh-pages": "^6.3.0",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "svelte": "^5.55.9",
+    "svelte-check": "^4.4.8",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.13"
+  }
 }
